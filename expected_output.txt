@@ -1,0 +1,52 @@
+
+
+To use the scripts, ensure that your working directory contains the
+scripts, start Magma, and enter:
+
+1) load "acyclic_cover_computation.m";
+
+Expected output:
+
+> load "acyclic_cover_computation.m";
+Loading "acyclic_cover_computation.m"
+We first setup the acyclic cover, this file includes various sanity checks,
+which should all return 'true'.
+
+Loading "setup_cover.m"
+true
+true
+true
+true
+true
+true
+true
+We next define and combine the Cech differential matrices out of various
+submatrices. These three files should produce no output.
+
+Loading "cech_differential_submatrices_1.m"
+Loading "cech_differential_assembly_1.m"
+Loading "cech_differential_0.m"
+We construct the horizontal maps required in the short exact sequence of Cech
+complexes, used to compute the tropical cycle.
+
+Loading "ses_maps.m"
+We now process the results of our calculations.
+
+Rank of first Cech differential (wrt fine cover, expect 1689):
+ 1689
+Rank of the second Cech differential (wrt fine cover) computing cohomology of the constant Z2 sheaf, (expect 1561):
+ 1561
+Rank of second Cech differential (wrt fine cover, expect 10820):
+ 10820
+Now check that the two cech differentials for the push-forward sheaf form a complex: 
+ true
+Dimension of the composition:
+ 4679
+Dimension of the intersection:
+ 4680
+Is composition contained in the intersection:
+ true
+The indices of the open sets contained in the support of the tropical cycle:
+ { 1476, 1632, 1788, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1942, 1943, 1944, 2022, 2036, 2037, 2038, 2039, 2040, 2041, 2042, 2043, 2044, 2045,
+2046, 2047, 2048, 2075, 2076, 2077, 2078, 2079, 2080, 2081, 2082, 2083, 2084, 2085, 2086, 2087, 2100, 2146, 2157, 2159, 2160, 2325, 2330, 2332, 2856, 2859, 2874, 2880,
+3024, 3096, 3120 }
